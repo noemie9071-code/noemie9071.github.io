@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes recettes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #ddd;
+            font-size: 16px;
+        }
+
+        .tabs button.active {
+            background-color: #ffb347;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🍽️ Mes recettes</h1>
+
+<div class="tabs">
+    <button class="active" onclick="showTab('entrees')">Entrées</button>
+    <button onclick="showTab('plats')">Plats</button>
+    <button onclick="showTab('desserts')">Desserts</button>
+</div>
+
+<div class="content">
+    <ul id="entrees">
+        <li>Avocat crevettes</li>
+        <li>Bruschetta</li>
+        <li>Carottes râpées</li>
+    </ul>
+
+    <ul id="plats" style="display:none;">
+        <li>Bœuf bourguignon</li>
+        <li>Chili con carne</li>
+        <li>Lasagnes</li>
+    </ul>
+
+    <ul id="desserts" style="display:none;">
+        <li>Brownie</li>
+        <li>Mousse au chocolat</li>
+        <li>Tarte aux pommes</li>
+    </ul>
+</div>
+
+<script>
+    function showTab(tabId) {
+        const sections = ['entrees', 'plats', 'desserts'];
+        const buttons = document.querySelectorAll('.tabs button');
+
+        sections.forEach(section => {
+            const ul = document.getElementById(section);
+            const items = Array.from(ul.children);
+
+            // tri alphabétique
+            items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+            items.forEach(item => ul.appendChild(item));
+
+            ul.style.display = section === tabId ? 'block' : 'none';
+        });
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
