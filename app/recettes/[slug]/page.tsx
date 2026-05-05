@@ -1,6 +1,12 @@
 import { recettes } from "@/lib/data";
 import Image from "next/image";
 
+export async function generateStaticParams() {
+  return recettes.map((recette) => ({
+    slug: recette.slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const recette = recettes.find((r) => r.slug === params.slug);
 

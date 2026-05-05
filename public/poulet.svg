@@ -1,0 +1,7 @@
+<!-- SVG placeholder for roasted chicken -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#fce8d8"/>
+  <ellipse cx="200" cy="150" rx="70" ry="85" fill="#d4a574"/>
+  <circle cx="200" cy="100" r="35" fill="#cd9b5f"/>
+  <text x="200" y="280" font-size="24" text-anchor="middle" fill="#333">Poulet Rôti 🍗</text>
+</svg>

@@ -1,0 +1,9 @@
+<!-- SVG placeholder for pancakes -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f5e6d3"/>
+  <circle cx="200" cy="150" r="80" fill="#deb887"/>
+  <circle cx="160" cy="140" r="15" fill="#8b7355"/>
+  <circle cx="200" cy="140" r="15" fill="#8b7355"/>
+  <circle cx="240" cy="140" r="15" fill="#8b7355"/>
+  <text x="200" y="280" font-size="24" text-anchor="middle" fill="#333">Pancakes 🥞</text>
+</svg>
